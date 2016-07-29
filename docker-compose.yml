@@ -1,0 +1,17 @@
+mysql:
+  image: mysql:5.5
+  volumes:
+    - ~/data/mysql/tco:/var/lib/mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=foo
+  ports:
+    - "3306"
+
+web:
+  build: .
+  volumes:
+    - .:/home/app
+  ports:
+    - "4000:4000"
+  links:
+    - mysql
