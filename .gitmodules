@@ -1,0 +1,3 @@
+[submodule "passbolt"]
+	path = passbolt
+	url = https://github.com/passbolt/passbolt.git
